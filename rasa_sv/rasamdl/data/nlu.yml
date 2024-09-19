@@ -1,0 +1,182 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - chào bạn
+    - chào
+- intent: goodbye
+  examples: |
+    - good by
+    - cee you later
+    - bye
+    - goodbye
+    - chào tạm biệt
+    - hẹn gặp lại
+    - gặp lại bạn sau
+    - tôi đi đây
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - đúng
+    - chính xác
+    - đúng như vậy
+    - phải
+    - đúng rồi
+- intent: deny
+  examples: |
+    - no
+    - n
+    - không
+    - không phải như vậy
+    - bạn sai rồi
+    - không đúng
+    - không phải
+    - từ chối
+    - không đồng ý
+- intent: can_help
+  examples: |
+    - bạn có thể làm gì
+    - bạn làm được gì
+    - bạn có thể giúp gì cho tôi
+    - bạn có thể hướng dẫn gì cho tôi
+- intent: thanks
+  examples: |
+    - cảm ơn bạn rất nhiều
+    - thank
+    - thank you
+    - thanks
+    - cảm ơn bạn
+    - tốt
+    - bạn làm tốt lắm
+- intent: bot_challenge
+  examples: |
+    - bạn là ai?
+    - bạn có phải con người?
+    - tôi đang nói chuyện với ai?
+- intent: ask_for_pesticides
+  examples: |
+    - tôi có thể lấy những loại thuốc nào để chữa trị loại bệnh đó?
+    - bạn có thể cho tôi loại thuốc để trị loại sâu đó?
+    - bạn có thể cho tôi loại thuốc để trị loại sâu này
+    - bạn có thể cho tôi loại sản phẩm để trị loại sâu đó?
+    - cho tôi loại thuốc để trị loại sâu đó?
+    - cho tôi loại thuốc để trị bệnh này
+    - làm sao để trị loại bệnh này?
+    - làm sao để trị loại sâu đó
+    - làm sao để trị bệnh này
+- intent: harmful_pests_info
+  examples: |
+    - bạn có thể cho tôi biết bệnh [vàng lá chín sớm](disease_name) là gì không?
+    - cho tôi thông tin của bệnh [cháy lá](disease_name).
+    - bạn có thể cho tôi cách phòng ngừa bệnh [cháy lá](disease_name) trên lúa không.
+    - bệnh [thối rễ](disease_name) là gì?
+    - bệnh [đạo ôn](disease_name) là bệnh gì?
+    - [đạo ôn] là loại bệnh như thế nào?
+    - biểu hiện của bệnh [khô vằn].
+    - bệnh [thán thư](disease_name) gây hại ra sao?
+    - [sâu đục thân](worm_name) là loại sâu gì?
+    - [sâu đục thân](worm_name) gây hại ra sao?
+    - cho tôi thông tin về loại [rầy nâu](worm_name).
+    - [muỗi hành](worm_name) là loài gì?
+    - tôi muốn biết thông tin về loài [sâu cuốn lá](worm_name).
+    - loài [nhện dé](worm_name) là loài như thế nào?
+    - cho tôi thông tin về bệnh [đạo ôn](disease_name) và [sâu đục thân](worm_name)
+    - cho tôi thông tin về [sâu đục thân](worm_name) và bệnh [đạo ôn](disease_name)
+    - bệnh [đạo ôn](disease_name) và [sâu đục thân](worm_name) là gì
+    - [sâu đục thân](worm_name) và bệnh [đạo ôn](disease_name) là gì
+    - bệnh [đạo ôn](disease_name) và [sâu đục thân](worm_name)
+    - bạn có thể cho tôi biết về bệnh [đạo ôn](disease_name) và [sâu đục thân](worm_name) không
+    - bạn có thể cho tôi biết về [sâu đục thân](worm_name) và bệnh [đạo ôn](disease_name) không
+    - [sâu đục thân](worm_name) và bệnh [đạo ôn](disease_name)
+- intent: harmful_pests_info_and_list_product
+  examples: |
+    - bệnh [đạo ôn](disease_name) là gì và những sản phẩm để chữa trị nó 
+    - cho tôi thông tin bệnh [đạo ôn](disease_name) cũng như những loại thuốc phòng trừ nó
+    - [đạo ôn](disease_name) là gì và cách phòng trừ nó
+    - tôi muốn biết bệnh [đạo ôn](disease_name) là gì và cách phòng trừ nó
+    - bệnh [đạo ôn](disease_name) và cách chữa trị
+    - thông tin về bệnh [đạo ôn](disease_name) và những sản phẩm về nó
+    - bệnh [đạo ôn](disease_name) gây hại như thế nào và cách phòng trừ nó
+    - [sâu đục thân](worm_name) là gì và những sản phẩm để chữa trị nó 
+    - cho tôi thông tin [sâu đục thân](worm_name) cũng như những loại thuốc phòng trừ nó
+    - [sâu đục thân](worm_name) là gì và cách phòng trừ nó
+    - tôi muốn biết [sâu đục thân](worm_name) là gì và cách phòng trừ nó
+    - [sâu đục thân](worm_name) và cách chữa trị
+    - thông tin về [sâu đục thân](worm_name) và những sản phẩm về nó
+    - [sâu đục thân](worm_name) gây hại như thế nào và cách phòng trừ nó
+- intent: list_product
+  examples: |
+    - sản phẩm có tên là [Anphatox 5EC - 1L](product_name)
+    - sản phẩm [Anphatox 5EC - 1L](product_name) có trong cửa hàng không
+    - cho tôi thông tin sản phẩm [Anphatox 5EC - 1L](product_name)
+    - sản phẩm [Anphatox](product_name)
+    - sản phẩm tên là [Khai quang](product_name)
+    - sản phẩm [Anphatox](product_name) giá bao nhiêu
+    - thông tin sản phẩm [Anphatox](product_name)
+    - sản phẩm [Anphatox](product_name) còn bao nhiêu trong kho
+    - [Anphatox](product_name) giá bao nhiêu
+    - [Anphatox](product_name) có bán không
+    - [Anphatox](product_name) còn bao nhiêu
+    - tôi muốn mua sản phẩm [Khai quang](product_name)
+    - sản phẩm thuộc loại [trừ sâu](category_name)
+    - danh sách sản phẩm loại [trừ bệnh](category_name)
+    - danh sách sản phẩm có loại [phân bón](category_name)
+    - cho tôi những chai thuốc trừ bệnh [trừ bệnh](category_name)
+    - danh sách thuốc [trừ bệnh](category_name)
+    - thuốc [trừ sâu](category_name)
+    - cho tôi những bao [phân bón](category_name)
+    - thuốc dùng để [trừ sâu](category_name)
+    - sản phẩm trị [bọ xít](subcategory_name)
+    - sản phẩm phòng ngừa [lem lép hạt](subcategory_name)
+    - sản phẩm là [phân bón lá](subcategory_name)
+    - cho tôi những thuốc [trừ bệnh](category_name) trị [sương mai](subcategory_name)
+    - thuốc [trừ sâu](category_name) trị [ruồi vàng](subcategory_name)
+    - những bao [phân bón](category_name) là [phân hóa học](subcategory_name)
+    - sản phẩm chai thuốc [trừ cỏ](category_name) loại [lưu dẫn](subcategory_name)
+    - loại sản phẩm phụ [phân bón lá](subcategory_name)
+    - thuốc đặc trị [rầy nâu](subcategory_name)
+    - thuốc trị bệnh [đạo ôn](subcategory_name)
+    - cho tôi những sản phẩm trị [sâu đục thân](subcategory_name)
+    - sản phẩm dành cho [lúa](plant_name)
+    - sản phẩm dùng trên [cây công nghiệp](plant_name)
+    - sản phẩm cho [cây ăn trái](plant_name)
+    - thuốc dành cho [lúa](plant_name)
+    - thuốc dùng trên [cây công nghiệp](plant_name)
+    - thuốc [trừ bệnh](category_name) cho [cây ăn trái](plant_name)
+    - thuốc [trừ sâu](category_name) dành cho [lúa](plant_name)
+    - [phân bón](category_name) dùng trên [cây công nghiệp](plant_name)
+    - thuốc [trừ cỏ](category_name) dùng trong [cây ăn trái](plant_name)
+    - thuốc đặc trị [đạo ôn](subcategory_name) trên [cây ăn trái](plant_name)
+    - thuốc trị [sâu xanh](subcategory_name) cho [rau màu](plant_name)
+    - thuốc [trừ cỏ](category_name) [có chọn lọc](subcategory_name) cho [lúa](plant_name)
+    - [phân bón vi lượng](subcategory_name) cho [cây ăn trái]
+    - các sản phẩm của [Lion Agrevon](company_name)
+    - sản phẩm từ [Hợp Trí](company_name)
+    - sản phẩm sản xuất bởi [Lion Agrevo](company_name)
+    - danh sách thuốc của [Lion Agrevon](company_name)
+    - các thuốc từ [Hợp Trí](company_name)
+    - thuốc sản xuất bởi [Lion Agrevo](company_name)
+    - các sản phẩm của công ty [Lion Agrevon](company_name)
+    - sản phẩm từ công ty [Hợp Trí](company_name)
+    - sản phẩm sản xuất bởi công ty [Lion Agrevo](company_name)
+    - danh sách thuốc của công ty [Lion Agrevon](company_name)
+    - các thuốc từ công ty [Hợp Trí](company_name)
+    - thuốc sản xuất bởi công ty [Lion Agrevo](company_name)
+    - [phân bón](category_name) của [Lion Agrevon](company_name)
+    - thuốc [trừ sâu](category_name) từ [Hợp Trí](company_name)
+    - thuốc [trừ cỏ](category_name) sản xuất bởi [Lion Agrevo](company_name)
+    - thuốc [trừ bệnh](category_name) của [Lion Agrevon](company_name)
+    - các thuốc [trừ sâu](category_name) sản xuất bởi [Lion Agrevo](company_name)
+    - sản phẩm [trừ sâu](category_name) dành cho [lúa](plant_name)
+    - thuốc của [Lion Agrevon](company_name) chuyên [trừ bệnh](category_name) trên [lúa]
+    - thuốc [trừ sâu](category_name) đặc trị [sâu xanh](subcategory_name) của công ty[Lion Agrevon](company_name) trên [cây ăn trái](plant_name)
+    - thuốc của công ty [Lion Agrevo](company_name) chuyên đặc trị [sâu xanh](subcategory_name)
+    - [phân bón](category_name) loại [phân bón lá](subcategory_name) trên cây [cà phê](plant_name)
+    - thuốc trị [đạo ôn](subcategory_name) trên cây [lúa](plant_name)
+    - thuốc [trừ bệnh](category_name) cho [cây ăn trái](plant_name)
+    - thuốc [trừ cỏ](category_name) [có chọn lọc](subcategory_name) cho [lúa](plant_name)
+    - thuốc [trừ sâu](category_name) đặc trị [sâu xanh](subcategory_name) của công ty [Lion Agrevon](company_name) trên [cây ăn trái](plant_name)

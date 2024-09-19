@@ -1,0 +1,128 @@
+version: "3.1"
+
+stories:
+
+- story: greet 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: greet 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: greet 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: greet 4
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: greet 5
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- story: can help 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: can_help
+  - action: utter_can_help
+
+- story: can help 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: can_help
+  - action: utter_can_help
+  - intent: thanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: can help 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: can_help
+  - action: utter_can_help
+  - intent: list_product
+  - action: action_filter_products
+  - intent: thanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: can help 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: can_help
+  - action: utter_can_help
+  - intent: list_product
+  - action: action_filter_products
+
+- story: can help 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: can_help
+  - action: utter_can_help
+  - intent: list_product
+  - action: action_filter_products
+  - intent: deny
+  - action: utter_sorry
+
+- story: can help 1
+  steps:
+  - intent: can_help
+  - action: utter_can_help
+
+- story: list product 1
+  steps:
+  - intent: list_product
+  - action: action_filter_products
+
+- story: list product 2
+  steps:
+  - intent: list_product
+  - action: action_filter_products
+  - intent: thanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: list product 3
+  steps:
+  - intent: list_product
+  - action: action_filter_products
+  - intent: deny
+  - action: utter_sorry
+
+- story: harmful pests info 1
+  steps:
+  - intent: harmful_pests_info
+  - action: action_search_info
+
+- story: harmful pests info 2
+  steps:
+  - intent: harmful_pests_info
+  - action: action_search_info
+  - intent: ask_for_pesticides
+  - action: utter_solution
+  - action: action_set_category
+  - action: action_filter_products
+
+- story: harmful pests info 3
+  steps:
+  - intent: harmful_pests_info_and_list_product
+  - action: action_search_info
+  - action: utter_solution
+  - action: action_set_category
+  - action: action_filter_products

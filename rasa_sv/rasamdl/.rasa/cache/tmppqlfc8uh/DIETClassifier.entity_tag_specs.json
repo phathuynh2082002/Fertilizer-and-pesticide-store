@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-category_name",
+      "2": "I-category_name",
+      "3": "L-category_name",
+      "4": "U-category_name",
+      "5": "B-company_name",
+      "6": "I-company_name",
+      "7": "L-company_name",
+      "8": "U-company_name",
+      "9": "B-plant_name",
+      "10": "I-plant_name",
+      "11": "L-plant_name",
+      "12": "U-plant_name",
+      "13": "B-product_name",
+      "14": "I-product_name",
+      "15": "L-product_name",
+      "16": "U-product_name",
+      "17": "B-subcategory_name",
+      "18": "I-subcategory_name",
+      "19": "L-subcategory_name",
+      "20": "U-subcategory_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-category_name": 1,
+      "I-category_name": 2,
+      "L-category_name": 3,
+      "U-category_name": 4,
+      "B-company_name": 5,
+      "I-company_name": 6,
+      "L-company_name": 7,
+      "U-company_name": 8,
+      "B-plant_name": 9,
+      "I-plant_name": 10,
+      "L-plant_name": 11,
+      "U-plant_name": 12,
+      "B-product_name": 13,
+      "I-product_name": 14,
+      "L-product_name": 15,
+      "U-product_name": 16,
+      "B-subcategory_name": 17,
+      "I-subcategory_name": 18,
+      "L-subcategory_name": 19,
+      "U-subcategory_name": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

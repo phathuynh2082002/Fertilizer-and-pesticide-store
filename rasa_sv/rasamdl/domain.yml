@@ -1,0 +1,111 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- can_help
+- deny
+- goodbye
+- greet
+- list_product
+- harmful_pests_info
+- ask_for_pesticides
+- thanks
+- harmful_pests_info_and_list_product
+entities:
+- subcategory_name
+- company_name
+- plant_name
+- category_name
+- product_name
+- disease_name
+- worm_name
+slots:
+  product_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: product_name
+  category_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: category_name
+  subcategory_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: subcategory_name
+  plant_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: plant_name
+  company_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: company_name
+  disease_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: disease_name
+  worm_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: worm_name
+responses:
+  utter_greet:
+  - text: Tôi có thể giúp gì cho bạn?
+  - text: Chúc bạn một ngày tốt lành
+  - text: Hãy nói cho tôi bạn muốn làm gì
+  - text: Chào bạn.
+  - text: Rất vui được đón tiếp bạn.
+  utter_goodbye:
+  - text: Rất vui được đón tiếp bạn
+  - text: Hãy quay lại với của hàng thường xuyên nhé
+  - text: Đón tiếp bạn là niềm vinh hạnh đối với tôi
+  - text: Chào tạm biệt và chúc bạn một ngày tốt lành
+  - text: Tạm biệt bạn
+  utter_iamabot:
+  - text: Tôi là chatbot hỗ trợ khách hàng trong việc mua sắm.
+  - text: Tôi là chatbot hỗ trợ bạn trong việc mua săm.
+  - text: Tôi là chatbot có thể giúp bạn trong việc mua sắm.
+  - text: Tôi là chatbot giúp bạn mua sắm dễ dàng hơn.
+  utter_can_help:
+  - text: Tôi có thể hỗ trợ bạn trong việc mua sắm.
+  - text: Tôi có thể cho bạn thông tin sản phẩm mà bạn cần.
+  - text: Tôi có thể cho bạn thông tin sản phẩm mà bạn tiềm kiếm.
+  - text: Tôi có thể cho bạn thông tin về các loại sâu bệnh hại mà bạn đang gặp phải.
+  - text: Tôi có thể cho bạn thông tin cần biết để cần tránh khỏi các loại sâu bệnh hại.
+  - text: Tôi có thể cho bạn một số sản phẩm mà bạn cần.
+  utter_sorry:
+  - text: Tôi thành thật xin lỗi.
+  - text: Tôi thành thật xin lỗi vì sai sót của mình.
+  - text: Xin lỗi bạn vì sai sót này.
+  - text: Thành thật xin lỗi.
+  - text: Lỗi của tôi
+  utter_solution:
+  - text: Để trị loại sâu bệnh hại này, bạn nên sử dụng một số loại thuốc phía dưới.
+  - text: Để trị loại sâu bệnh hại này, những sản phẩm dưới đây có thể giúp bạn.
+  - text: Những loại thuốc dưới đây sẽ giúp bạn phòng ngừa và chữa trị loại sâu bệnh hại này.
+  - text: Hãy tham khảo một số loại thuốc dưới đây.
+
+  utter_please_rephrase:
+  - text: Thành thật xin lỗi, tôi không hiểu câu hỏi của bạn.
+  - text: Vui lòng nhập lại câu hỏi của bạn.
+  - text: Tôi không hiểu về câu nói vừa rồi.
+  - text: Xin lỗi tôi không thể trả lời câu hỏi này của ban.
+  - text: Tôi không biết về vấn đề này.
+  - text: Câu hỏi này tôi không hề biết đến.
+
+actions:
+- action_filter_products
+- action_search_info
+- action_set_category
+- action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
